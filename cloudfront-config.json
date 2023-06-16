@@ -1,0 +1,22 @@
+{
+    "CallerReference": "unique-reference",
+    "Comment": "My CloudFront Distribution",
+    "DefaultRootObject": "index.html",
+    "Origins": {
+      "Items": [
+        {
+          "Id": "my-s3-origin",
+          "DomainName": "your-bucket-name.s3.amazonaws.com",
+          "S3OriginConfig": {
+            "OriginAccessIdentity": ""
+          }
+        }
+      ],
+      "Quantity": 1
+    },
+    "DefaultCacheBehavior": {
+      "TargetOriginId": "my-s3-origin",
+      "ViewerProtocolPolicy": "redirect-to-https"
+    }
+  }
+  
